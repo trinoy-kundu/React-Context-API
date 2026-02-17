@@ -1,16 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import Counter from './Components/Counter'
+import ClickCounter from './Components/ClickCounter'
+import Section from './Components/section';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default class App extends React.Component {
+  state = {
+    theme: 'dark',
+  };
 
-  return (
-    <>
-      
-    </>
-  )
+  render() {
+    const {theme} = this.state;
+    return(
+      <div>
+        <Counter>
+            {(count, incrementCount) => (
+              <ClickCounter count={count} incrementCount={incrementCount}/>
+            )}
+        </Counter>
+        <Section theme={theme}/>
+      </div>
+    )
+  }
 }
-
-export default App
