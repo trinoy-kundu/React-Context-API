@@ -2,6 +2,7 @@ import React from 'react'
 import Counter from './Components/Counter'
 import ClickCounter from './Components/ClickCounter'
 import Section from './Components/section';
+import ThemeContext from './Contexts.jsx/themeContext';
 
 export default class App extends React.Component {
   state = {

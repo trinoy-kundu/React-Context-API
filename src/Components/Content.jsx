@@ -15,6 +15,7 @@ export default function Content({theme}) {
                     />
                 )}
             </Counter>
+            
         </div>
     );
 }
