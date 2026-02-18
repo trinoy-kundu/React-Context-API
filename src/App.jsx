@@ -18,7 +18,9 @@ export default class App extends React.Component {
               <ClickCounter count={count} incrementCount={incrementCount}/>
             )}
         </Counter>
-        <Section theme={theme}/>
+        <ThemeContext.Provider value={{theme}}>
+          <Section />
+        </ThemeContext.Provider>
       </div>
     )
   }
