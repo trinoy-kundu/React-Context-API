@@ -5,6 +5,7 @@ import React from 'react';
 
 export default class Content extends React.Component {
 
+    // static contextType = ThemeContext (another way to use contextType)
     render() {
         const {theme, switchTheme} = this.context;
         return (
